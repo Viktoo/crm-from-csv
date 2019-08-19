@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './customers.css';
+import './DataTable.css';
 
-class Customers extends Component {
+class DataTable extends Component {
   constructor() {
     super();
     this.state = {
@@ -29,4 +29,4 @@ class Customers extends Component {
   }
 }
 
-export default Customers;
+export default DataTable;
