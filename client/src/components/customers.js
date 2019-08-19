@@ -5,23 +5,23 @@ class Customers extends Component {
   constructor() {
     super();
     this.state = {
-      customers: []
+      source: []
     };
   }
 
   componentDidMount() {
-    fetch('/api/customers')
+    fetch('/api/myJson')
       .then(res => res.json())
-      .then(customers => this.setState({customers}, () => console.log('Customers fetched...', customers)));
+      .then(source => this.setState({source}, () => console.log('Json data fetched...', source)));
   }
 
   render() {
     return (
       <div>
-        <h2>Customers</h2>
+        <h2>myJson names</h2>
         <ul>
-        {this.state.customers.map(customer => 
-          <li key={customer.id}>{customer.firstName} {customer.lastName}</li>
+        {this.state.source.map(source => 
+          <li key={source.id}>{source.first_name} {source.last_name}</li>
         )}
         </ul>
       </div>

@@ -8,14 +8,12 @@ CSVToJSON().fromFile("./csv/normal.csv").then(source => {
 	console.log(source);
 }); 
 
-app.get('/api/customers', (req, res) => {
-  const customers = [
-    {id: 1, firstName: 'John', lastName: 'Doe'},
-    {id: 2, firstName: 'Brad', lastName: 'Traversy'},
-    {id: 3, firstName: 'Mary', lastName: 'Swanson'},
-  ];
+app.get('/api/myJson', (req, res) => {
+	CSVToJSON().fromFile("./csv/normal.csv").then(source => {
+		//console.log(source);
+		res.json(source);
 
-  res.json(customers);
+	});
 });
 
 const port = 5000;
