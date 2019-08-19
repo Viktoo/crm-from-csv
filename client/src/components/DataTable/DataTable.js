@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './DataTable.css';
 
+const JsonTable = require('ts-react-json-table');
+
 class DataTable extends Component {
   constructor() {
     super();
@@ -18,12 +20,7 @@ class DataTable extends Component {
   render() {
     return (
       <div>
-        <h2>myJson names</h2>
-        <ul>
-        {this.state.source.map(source => 
-          <li key={source.id}>{source.first_name} {source.last_name}</li>
-        )}
-        </ul>
+        <JsonTable rows={ this.state.source } />       
       </div>
     );
   }
