@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './DupeAlert.css';
 
-
 const JsonTable = require('ts-react-json-table');
 
 var columnsJSON = [
@@ -21,8 +20,7 @@ var columnsJSON = [
 
   var excludeColumns = [
    'id',
-];
-
+  ];
 
 class DupeAlert extends Component {
   constructor() {
@@ -40,19 +38,16 @@ class DupeAlert extends Component {
     
   }
 
-
   render() {
     return (
     <div style={{marginTop:'20px'}}>
-      <img src={require("../../assets/DupesFound.png")} className='dupesFoundImage'/>
-      <div className='DataTable-container'>
+      <img src={require("../../assets/DupesFound.png")} className='DupeAlert-image'/>
+      <div className='DupeAlert-container'>
         <JsonTable 
-          className='antiTable' 
-          theadClassName={'antiheaders'}
+          className='DupeAlert-table' 
           rows={ this.state.antisource } 
           columns={ columnsJSON } 
           excludeColumns={ excludeColumns }
-
           />       
       </div>
       </div>

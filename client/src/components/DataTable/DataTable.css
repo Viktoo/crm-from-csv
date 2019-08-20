@@ -1,21 +1,17 @@
 .DataTable-container {
-	padding-top: 10px;
+	padding-top: 30px;
 }
 
 /*.jsonOdd {
   background: #eeee;
 }*/
 
-.mainTable {
+.DataTable-mainTable {
 	margin-left: 10px;
 	margin-right: 10px;
 }
 
-.headers {
+.DataTable-headers {
 	background: #F1EFF9;
 	color: black;
-}
-
-.headerClass {
-
 }

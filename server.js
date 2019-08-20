@@ -8,10 +8,8 @@ const app = express();
 app.get('/api/myJSON', (req, res) => {
 
   CSVToJSON().fromFile("./csv/advanced.csv").then(source => {
-  	
-  		//var array = JSON.parse(source.toString())
-
-		var seenNames = {};
+			
+			var seenNames = {};
 
 			source = source.filter(function(currentObject) {
 		    if (currentObject.last_name in seenNames) {
@@ -21,7 +19,6 @@ app.get('/api/myJSON', (req, res) => {
 		        return true;
 		    }
 		});
-
   		res.json(source);
 	}); 
 });
@@ -39,7 +36,6 @@ app.get('/api/dupes', (req, res) => {
 		        return false;
 		    }
 		});
-
 		res.json(antisource);
 	});
 });

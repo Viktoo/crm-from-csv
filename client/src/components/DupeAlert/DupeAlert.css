@@ -1,23 +1,14 @@
-.DataTable-container {
+.DupeAlert-container {
 	padding-top: 40px;
 }
 
-
-.antiTable {
+.DupeAlert-table {
 	margin-left: 10px;
 	margin-right: 10px;
 	border: 1px solid #E0D500;
 }
 
-.antiheaders {
-
-}
-
-.headerClass {
-
-}
-
-.dupesFoundImage {
+.DupeAlert-image {
 	max-height:20px;
 	width: auto;
 	padding:10px;

@@ -3,11 +3,7 @@
     height: 100px;
     padding: 20px;
     position: relative;
-
-}
-
-.Header-logo {
-
+    overflow-x: hidden;
 }
 
 .Header-image {
@@ -17,22 +13,17 @@
 	float:left;
 }
 
-.Header-header {
-
-}
-
 .Header-title {
 	color:white;
 }
 
 .Header-personIcon {
-
 	float: right;
 	padding:10px;
 }
 
 .Header-personIconImage {
- max-height: 40px;
+ 	max-height: 40px;
 }
 
 .Header-tabBar {
@@ -43,7 +34,6 @@
 }
 
 .Header-bottomAligner {
-
 	height: 100%;
   	vertical-align: bottom;
   	margin-left: 50px;
@@ -55,7 +45,6 @@
 	background: #403168;
 	float:left;
 	margin-left: 10px;
-
 }
 
 .Header-selected {
@@ -64,5 +53,4 @@
 	float:left;
 	background: white;
 	margin-left: 10px;
-
 }

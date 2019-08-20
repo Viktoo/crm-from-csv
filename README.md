@@ -1,4 +1,4 @@
-#CRM with built-in duplicate entry detection 
+# CRM with built-in duplicate entry detection 
 
 [Quick Design Docs](https://www.notion.so/makarskyy/Quick-Design-Doc-894f19a817a54b319d3c6bbc65ac11cf)
 

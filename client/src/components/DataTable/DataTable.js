@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './DataTable.css';
 
-
 const JsonTable = require('ts-react-json-table');
 
 var columnsJSON = [
@@ -21,8 +20,7 @@ var columnsJSON = [
 
   var excludeColumns = [
    'id',
-];
-
+  ];
 
 class DataTable extends Component {
   constructor() {
@@ -37,20 +35,17 @@ class DataTable extends Component {
     fetch('/api/myJSON')
       .then(res => res.json())
       .then(source => this.setState({source}, () => console.log('JSON Data...', source)));
-    
   }
-
 
   render() {
     return (
       <div className='DataTable-container'>
         <JsonTable 
-          className='mainTable' 
-          theadClassName={'headers'}
+          className='DataTable-mainTable' 
+          theadClassName={'DataTable-headers'}
           rows={ this.state.source } 
           columns={ columnsJSON } 
           excludeColumns={ excludeColumns }
-
           />       
       </div>
     );
