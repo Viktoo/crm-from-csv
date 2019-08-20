@@ -1,0 +1,25 @@
+.DataTable-container {
+	padding-top: 40px;
+}
+
+
+.antiTable {
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid #E0D500;
+}
+
+.antiheaders {
+
+}
+
+.headerClass {
+
+}
+
+.dupesFoundImage {
+	max-height:20px;
+	width: auto;
+	padding:10px;
+	float:left;
+}

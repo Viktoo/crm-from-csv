@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import DataTable from './components/DataTable/DataTable.js';
+import DataTable from './components/DataTable/DataTable';
 import Header from './components/Header/Header.js';
+import DupeAlert from './components/DupeAlert/DupeAlert.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header/>
+        <DupeAlert/>
         <DataTable/>
       </div>
     );

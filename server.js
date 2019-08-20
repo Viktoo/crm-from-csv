@@ -1,18 +1,46 @@
-const express = require('express');
 const CSVToJSON = require("csvtojson");
 const FileSystem = require("fs");
+const JsonTable = require('ts-react-json-table');
+const express = require('express');
 
 const app = express();
 
-CSVToJSON().fromFile("./csv/normal.csv").then(source => {
-	console.log(source);
-}); 
+app.get('/api/myJSON', (req, res) => {
 
-app.get('/api/myJson', (req, res) => {
-	CSVToJSON().fromFile("./csv/normal.csv").then(source => {
-		//console.log(source);
-		res.json(source);
+  CSVToJSON().fromFile("./csv/advanced.csv").then(source => {
+  	
+  		//var array = JSON.parse(source.toString())
 
+		var seenNames = {};
+
+			source = source.filter(function(currentObject) {
+		    if (currentObject.last_name in seenNames) {
+		        return false;
+		    } else {
+		        seenNames[currentObject.last_name] = true;
+		        return true;
+		    }
+		});
+
+  		res.json(source);
+	}); 
+});
+
+app.get('/api/dupes', (req, res) => {
+	CSVToJSON().fromFile("./csv/advanced.csv").then(antisource => {
+
+		var seenNames = {};
+
+		antisource = antisource.filter(function(currentObject) {
+		    if (currentObject.last_name in seenNames) {
+		        return true;
+		    } else {
+		        seenNames[currentObject.last_name] = false;
+		        return false;
+		    }
+		});
+
+		res.json(antisource);
 	});
 });
 
