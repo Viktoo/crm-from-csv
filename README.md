@@ -1,8 +1,10 @@
-# CRM with built-in duplicate entry detection 
+# CRM from CSV
+Convert CSV to JSON in Node.js, display data in React.js via a Table component seperating duplicates from remaining data. 
 
-[Quick Design Docs](https://www.notion.so/makarskyy/Quick-Design-Doc-894f19a817a54b319d3c6bbc65ac11cf)
+![Current implementation](/art/screenshot.png)
 
-
+## Design Doc
+[Quick Design Doc](https://www.notion.so/makarskyy/Quick-Design-Doc-894f19a817a54b319d3c6bbc65ac11cf)
 
 ## Usage
 
@@ -15,13 +17,4 @@ npm run client-install
 
 # Run the client & server with concurrently
 npm run dev
-
-# Run the Express server only
-npm run server
-
-# Run the React client only
-npm run client
-
-# Server runs on http://localhost:5000 and client on http://localhost:3000
 ```
-
