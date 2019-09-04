@@ -1,17 +1,15 @@
 const CSVToJSON = require("csvtojson");
 const FileSystem = require("fs");
-const JsonTable = require('ts-react-json-table');
 const express = require('express');
 
 const app = express();
 
 app.get('/api/myJSON', (req, res) => {
-
   CSVToJSON().fromFile("./csv/advanced.csv").then(source => {
-			
-			var seenNames = {};
+  	
+		var seenNames = {};
 
-			source = source.filter(function(currentObject) {
+		source = source.filter(function(currentObject) {
 		    if (currentObject.last_name in seenNames) {
 		        return false;
 		    } else {

@@ -31,7 +31,6 @@ class DataTable extends Component {
   }
 
   componentDidMount() {
-
     fetch('/api/myJSON')
       .then(res => res.json())
       .then(source => this.setState({source}, () => console.log('JSON Data...', source)));

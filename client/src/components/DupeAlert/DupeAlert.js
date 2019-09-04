@@ -31,11 +31,9 @@ class DupeAlert extends Component {
   }
 
   componentDidMount() {
-
     fetch('/api/dupes')
       .then(res => res.json())
       .then(antisource => this.setState({antisource}, () => console.log('Dupe Data...', antisource)));
-    
   }
 
   render() {
